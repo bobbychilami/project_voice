@@ -4,7 +4,7 @@ import speech_recognition as sr
 file = open("output.txt","w")
 
 r = sr.Recognizer()
-
+print("Please ask a question...")
 with sr.Microphone() as source:
     # read the audio data from the default microphone
     audio_data = r.record(source, duration=5)
@@ -15,5 +15,5 @@ with sr.Microphone() as source:
     file.writelines(text)
 
 file.close()
-os.system("py text_to_speech.py")
+os.system("python extension.py")
 
